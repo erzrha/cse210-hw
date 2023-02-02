@@ -7,20 +7,15 @@ class Programer
     {
         int count = 1;
         JournalEntry Jentry = new JournalEntry();
-        Console.WriteLine("Welcome to the Journal Program!");
-
+        Prompts prompts = new Prompts();
+        
         while(count != 0)
         {
-            Console.WriteLine("Please select one of the following choices: ");
-            Console.WriteLine("1.Write a new Entry");
-            Console.WriteLine("2.Display Journal");
-            Console.WriteLine("3.Load journal from file");
-            Console.WriteLine("4.Save journal.");
-            Console.WriteLine("5.Quit");
-            Console.Write("What would you like to do: ");
+            prompts.Prompt();
+            
             string ans = Console.ReadLine();
             int ans2 = int.Parse(ans);
-            
+                
             if (ans2 == 1)
             {
                 Jentry.choice();
@@ -48,9 +43,5 @@ class Programer
                 Console.WriteLine("Please choose");
             }
         }
-
     }
-
-
 }
-    
