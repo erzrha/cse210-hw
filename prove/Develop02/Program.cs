@@ -14,27 +14,27 @@ class Programer
             prompts.Prompt();
             
             string ans = Console.ReadLine();
-            int ans2 = int.Parse(ans);
+            int answer = int.Parse(ans);
                 
-            if (ans2 == 1)
+            if (answer == 1)
             {
                 Jentry.choice();
             }
 
-            else if (ans2 == 2)
+            else if (answer == 2)
             {
                 Jentry.Display();
             }
 
-            else if (ans2 == 3)
+            else if (answer == 3)
             {
                 Jentry.Load();
             }
-            else if (ans2 == 4)
+            else if (answer == 4)
             {
                 Jentry.Save();
             }
-            else if (ans2 == 5)
+            else if (answer == 5)
             {
                 count = 0;
             }
