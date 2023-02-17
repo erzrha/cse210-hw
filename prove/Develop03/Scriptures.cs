@@ -1,22 +1,36 @@
 using System;
 
-public class Scriptures
+public class Scripture
 {
-    private string _quote;
+    public Scripture()
+    {
 
-    public string SetScripture()
-        
-        {
-        Random randomGenerator = new Random();
-        string[] Scriptures = {"Proverb 3:5-6: Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.", "John 10:30: I and my father are one","John 11:35: and Jesus wept", "1Nephi 2:15 : and my father dwelt in a tent"};
-        int index = randomGenerator.Next(Scriptures.Length);
-        _quote = (Scriptures[index]);
-        return _quote;
-        
-        }
-        public string GetScripture()
-        {
-
-            return  _quote;
-        }
     }
+    public string _text = "";
+    List<string> listwords = new List<string>();
+    public string hide = " ";
+    
+    // Set refernce and Scripture and Adds them to a list
+    public void scripts(string reference, string _words)
+    {
+        string new_words = ($"{reference} {_words}");
+        listwords.Add(new_words);
+    }
+
+    //Displays the original scripture text and words from the list
+    public string Display()
+    {
+        foreach (string item in listwords)
+        {
+            Console.WriteLine(item);
+            hide = item;
+        }
+            return hide;
+
+    }
+    public string GetScripture()
+    {
+        return hide;
+    }    
+}
+
