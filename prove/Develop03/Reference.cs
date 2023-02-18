@@ -9,9 +9,11 @@ public class Reference
 
     //Stores the reference
     public string refs = "";
-    public Reference()
+    public Reference(string book, int chapter, int verse)
     {
-
+        _book = book;
+        _chapter = chapter;
+        _verse = verse;
     }
     //sets the reference information
     public string GetReference()

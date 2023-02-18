@@ -2,35 +2,24 @@ using System;
 
 public class Scripture
 {
-    public Scripture()
+     public string _text = "";
+     public string _reference = " ";
+    public string hide = " ";
+
+    public Scripture( string reference, string text)
     {
+        _text = text;
+        _reference = reference;
 
     }
-    public string _text = "";
-    List<string> listwords = new List<string>();
-    public string hide = " ";
+   
     
     // Set refernce and Scripture and Adds them to a list
-    public void scripts(string reference, string _words)
+    public string SetScripture()
     {
-        string new_words = ($"{reference} {_words}");
-        listwords.Add(new_words);
-    }
-
-    //Displays the original scripture text and words from the list
-    public string Display()
-    {
-        foreach (string item in listwords)
-        {
-            Console.WriteLine(item);
-            hide = item;
-        }
-            return hide;
-
-    }
-    public string GetScripture()
-    {
+        hide = ($"{_reference} {_text}");
+        Console.WriteLine(hide);
         return hide;
-    }    
+    }
 }
 

@@ -1,5 +1,3 @@
-
-
 using System;
 
 public class Word
@@ -7,7 +5,7 @@ public class Word
     Random randomGenerator = new Random();
     string hide = " ";
 
-    public void Display( string hidden)
+    public Word( string hidden)
     {
         int count = 1;
         hide = hidden;
